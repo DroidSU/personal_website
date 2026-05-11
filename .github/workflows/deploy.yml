@@ -1,0 +1,28 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ] # Runs every time you push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.19.0' # Ensures a modern version
+
+      - run: flutter pub get
+      
+      # IMPORTANT: This builds the app. 
+      # Replace 'the_mobile_explorer' with your GitHub Repo name if different.
+      - run: flutter build web --release --base-href "/personal_website/"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web # This tells GitHub to host only the built website

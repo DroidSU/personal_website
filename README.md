@@ -1,6 +1,6 @@
-# Sujoy Dutta - Portfolio Website
+# Sujoy Dutta | The Mobile Explorer
 
-A premium, modern, and minimal portfolio website built with Flutter Web.
+A premium, modern, and minimal portfolio website.
 
 ## Features
 - **Modern UI**: Dark theme with subtle purple accents.

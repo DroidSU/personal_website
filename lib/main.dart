@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Sujoy Dutta | Portfolio',
+      title: 'Sujoy Dutta | The Mobile Explorer',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       routerConfig: _router,

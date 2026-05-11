@@ -151,9 +151,9 @@ class HeroSection extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
             decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.85),
+              color: Colors.black.withOpacity(0.85),
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
+              border: Border.all(color: Colors.white.withOpacity(0.1)),
             ),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,

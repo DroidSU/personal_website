@@ -95,7 +95,7 @@ class ProjectsSection extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: (p['color'] as Color).withValues(alpha: 0.1),
+                    color: (p['color'] as Color).withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Icon(p['icon'] as IconData, color: p['color'] as Color, size: 28),

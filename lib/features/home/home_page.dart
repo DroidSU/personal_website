@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
             left: 0,
             right: 0,
             child: Container(
-              color: _isScrolled ? AppColors.background.withValues(alpha: 0.9) : Colors.transparent,
+              color: _isScrolled ? AppColors.background.withOpacity(0.9) : Colors.transparent,
               child: Navbar(
                 isScrolled: _isScrolled,
                 onNavItemTap: _scrollToSection,

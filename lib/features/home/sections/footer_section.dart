@@ -17,7 +17,7 @@ class FooterSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Divider(color: Colors.white.withValues(alpha: 0.05)),
+          Divider(color: Colors.white.withOpacity(0.05)),
           const SizedBox(height: 100),
           RichText(
             textAlign: TextAlign.center,

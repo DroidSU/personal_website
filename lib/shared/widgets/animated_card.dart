@@ -35,14 +35,14 @@ class _AnimatedCardState extends State<AnimatedCard> {
           borderRadius: BorderRadius.circular(widget.borderRadius),
           border: Border.all(
             color: _isHovered 
-              ? AppColors.accentPurple.withValues(alpha: 0.4) 
+              ? AppColors.accentPurple.withOpacity(0.4) 
               : AppColors.borderColor,
             width: 1.5,
           ),
           boxShadow: [
             if (_isHovered)
               BoxShadow(
-                color: AppColors.accentPurple.withValues(alpha: 0.08),
+                color: AppColors.accentPurple.withOpacity(0.08),
                 blurRadius: 30,
                 offset: const Offset(0, 15),
               ),

@@ -8,21 +8,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4 # Updated to v4 for Node 20+ support
       
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          flutter-version: '3.19.0' # Ensures a modern version
+          flutter-version: '3.19.0'
 
       - run: flutter pub get
       
-      # IMPORTANT: This builds the app. 
-      # Replace 'the_mobile_explorer' with your GitHub Repo name if different.
+      # The base-href MUST match your GitHub repository name
       - run: flutter build web --release --base-href "/personal_website/"
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4 # Updated to v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web # This tells GitHub to host only the built website
+          publish_dir: ./build/web

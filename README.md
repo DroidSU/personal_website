@@ -1,16 +1,26 @@
-# personal_website
+# Sujoy Dutta - Portfolio Website
 
-A new Flutter project.
+A premium, modern, and minimal portfolio website built with Flutter Web.
+
+## Features
+- **Modern UI**: Dark theme with subtle purple accents.
+- **Responsive**: Optimized for Desktop, Tablet, and Mobile.
+- **Smooth Animations**: Powered by `flutter_animate`.
+- **Clean Architecture**: Organized folder structure for maintainability.
+- **Smooth Navigation**: Section-based scrolling with a sticky navbar.
+
+## Tech Stack
+- Flutter Web
+- `go_router` for routing
+- `google_fonts` for typography
+- `flutter_animate` for animations
+- `font_awesome_flutter` for icons
+- `visibility_detector` for scroll reveal
 
 ## Getting Started
+1. Install dependencies: `flutter pub get`
+2. Run the project: `flutter run -d chrome`
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Assets
+Make sure to add your trekking images in `assets/images/`.
+- `trekking.jpg`: Hero and gallery image placeholder.

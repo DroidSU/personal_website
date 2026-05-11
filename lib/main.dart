@@ -1,12 +1,35 @@
-﻿import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
-import 'core/app.dart';
-import 'firebase_options.dart';
+import 'core/theme/app_theme.dart';
+import 'features/home/home_page.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const ProviderScope(child: App()));
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+final _router = GoRouter(
+  initialLocation: '/',
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const HomePage(),
+    ),
+  ],
+);
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'Sujoy Dutta | Portfolio',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
+      routerConfig: _router,
+    );
+  }
 }

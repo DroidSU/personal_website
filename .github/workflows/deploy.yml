@@ -20,7 +20,7 @@ jobs:
       - run: flutter pub get
       
       # The base-href MUST match your GitHub repository name
-      - run: flutter build web --release --base-href "/personal_website/"
+      - run: flutter build web --release --base-href "/personal_website/" --dart-define=IMGBB_API_KEY=${{ secrets.IMGBB_API_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4 # Updated to v4
